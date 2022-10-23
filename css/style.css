@@ -2,11 +2,23 @@
     --primary-text-color: #757575;
     --title-text-colot: #212121;
     --accent-color: #2196F3;
+} 
+html{
+    box-sizing: border-box;
 
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+.container{
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 1200px;
 }
 body{
     font-family:Roboto, sans-serif;
     letter-spacing: 0.02em;
+    margin: 0;
 }
 /*Web Studio Logo*/
 .logo {
@@ -67,14 +79,25 @@ a{
     color: var(--accent-color);
 }
 ul{
+    margin: 0;
+    padding: 0;
+   display: block;
     list-style: none;
 }
 /* Hero Menu*/
 .hero {
+    text-align: center;
     background-color: var(--title-text-colot);
 }
 
 .button{
+
+    display: inline-block;
+    border: 0px;
+    min-width: 216px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 11px 32px;  
+    border-radius: 4px;
     font-family: Roboto, sans-serif;
     cursor: pointer;
     color: #FFFFFF;
@@ -84,8 +107,24 @@ ul{
     line-height: 1.8;
     letter-spacing: 0.06em;
 }
+.list-menu{
+    display: inline-block;
+
+}
 /* Section */
+.section.no-padding{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.section{
+    padding: 94px;
+}
+.section-team{
+    padding: 94px;
+}
 .section-title{
+    margin-top: 0px;
+    margin-bottom: 0px;
     color: var(--title-text-colot);
     font-weight: 700;
     font-size: 14px;
@@ -93,17 +132,25 @@ ul{
     letter-spacing: 0.03em;
     text-transform: uppercase
     
-}
+} 
 
 .general-title{
+    margin-bottom: 30px;
+    margin-top: 0;
     color: #FFFFFF;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    text-transform: uppercase
+    text-transform: uppercase;
+}
+.title.centered{
+    text-align: center;
 }
 .title{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
     color: var(--title-text-colot);
     font-weight: 700;
     font-size: 36px;
@@ -111,6 +158,9 @@ ul{
     letter-spacing: 0.03em;
 }
 .hero-title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
     color: var(--title-text-colot);
     font-weight: 500;
     font-size: 16px;
@@ -118,12 +168,24 @@ ul{
     letter-spacing: 0.03em;
 }
 .subline{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    min-width: 270px;
     color: var(--primary-text-color);
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em
 }
+.info-pic{
+    margin-top: 50px;
+}
+.item-team .list{
+    display: inline-block;
+}
 .subline-hero{
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: center;
     color: var(--primary-text-color);
     font-family: 'Roboto';
     font-style: normal;
@@ -133,9 +195,15 @@ ul{
 }
 
 .section-team{
+    
     background-color: #F5F4FA;
 }
 .team-img{
+    box-sizing: border-box;
+    height: 368px;
+    width: 270px;
+    margin-top: 50px;
+    margin-bottom: 0px;
     background-color: #FFFFFF;
 }
 /* Footer */
@@ -143,6 +211,7 @@ ul{
     background-color: var(--title-text-colot);
 }
 .logo-footer{
+    margin-top: 60px;
     color: var(--accent-color);
     font-family: Raleway, cursive;
     font-weight: 700;
@@ -151,6 +220,7 @@ ul{
     letter-spacing: 0.03em;
 }
 .logo-accent-footer{
+    margin-top: 60px;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 26px;
@@ -158,7 +228,12 @@ ul{
     letter-spacing: 0.03em;
 
 }
+.address-footer{
+    margin-top: 20px;
+}
 .link-info-address {
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-style: normal;
     color: #FFFFFF;
     font-size: 14px;
@@ -167,11 +242,15 @@ ul{
 }
 
 .page-footer .address-footer .list-info.footer .link{
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 9px;
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.7;                                           
     letter-spacing: 0.03em;
+
 
 }
 .page-footer .address-footer .list-info.footer .link:hover,
@@ -179,7 +258,19 @@ ul{
     color: #2196F3;
 }
 /* Second page */
+.second-page{
+    padding: 94px;
+}
+.info-menu{
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.project-menu{
+    display: inline-block;
+}
 .title-menu{
+    margin-top: 20px;
+    margin-bottom: 0px;
     color: var(--title-text-colot); 
     font-weight: 700;
     font-size: 18px;
@@ -187,6 +278,8 @@ ul{
     letter-spacing: 0.06em;
 }
 .subline-menu{
+    margin-top: 4px;
+    margin-bottom: 0px;
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.87;
@@ -194,6 +287,8 @@ ul{
 }
 /* Filter */
 .filter .filter-menu .button {
+    border-radius: 4px;
+    display: inline-block;
     color: var(--title-text-colot);
     background-color: #F5F4FA;
     font-family: 'Roboto';
@@ -204,6 +299,8 @@ ul{
 }
 .filter .filter-menu .button:hover,
 .filter .filter-menu .button:focus{
+    border: 2px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1);
     color: #FFFFFF;
     background-color: #2196F3;
     cursor: pointer;
