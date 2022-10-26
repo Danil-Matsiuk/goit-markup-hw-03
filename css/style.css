@@ -16,7 +16,6 @@ html{
     padding-left: 15px;
     padding-right: 15px;
     width: 1200px;
-    outline: 2px solid tomato;
 }
 body{
     font-family:Roboto, sans-serif;
@@ -58,6 +57,7 @@ a{
     align-items: center;
     display: flex;
 }
+
 .site-nav.list{
     display: flex;
 }
@@ -65,6 +65,7 @@ a{
     margin-right: 50px;
 }
 .site-nav.list .link-nav.current{
+    display: block;
     color: var(--accent-color);
     font-weight: 500;
     font-size: 14px;
@@ -124,6 +125,7 @@ ul{
 }
 /* Hero Menu*/
 .hero {
+    padding: 200px;
     text-align: center;
     background-color: var(--title-text-colot);
 }
@@ -131,7 +133,6 @@ ul{
 .button{
     display: inline-block;
     border: 0px;
-    min-width: 216px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 11px 32px;  
     border-radius: 4px;
@@ -148,7 +149,12 @@ ul{
 .list-menu{
     display: flex;
 }
-
+.text-inf:not(:last-child){
+    margin-right: 30px;
+}
+.text-inf{
+    width: 270px;
+}
 /* Section */
 .section.no-padding{
     padding-top: 0px;
@@ -174,8 +180,12 @@ ul{
 } 
 
 .general-title{
-    margin-bottom: 30px;
+    width: 696px;
     margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
 
     color: #FFFFFF;
     font-weight: 900;
@@ -200,8 +210,8 @@ ul{
 }
 .hero-title{
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 0px;
+    margin: 0px;
+
 
     color: var(--title-text-colot);
     font-weight: 500;
@@ -209,7 +219,12 @@ ul{
     line-height: 1.2;
     letter-spacing: 0.03em;
 }
+.container-card{
+    padding: 30px 70px;
+
+}
 .subline{
+    
     margin-top: 10px;
     margin-bottom: 0px;
 
@@ -219,14 +234,22 @@ ul{
     letter-spacing: 0.03em
 }
 .info-pic{
+    display: flex;
     margin-top: 50px;
+}   
+.img-item{
+    margin-right: 30px;
 }
-.item-team .list{
-    display: inline-block;
+.img-item:nth-child(3){
+    margin-right: 0px;
+}
+.item-team{
+    white-space: nowrap;
+    display: flex;
 }
 .subline-hero{
-    margin-bottom: 0px;
     margin-top: 10px;
+    margin-bottom: 0px;
     text-align: center;
 
     color: var(--primary-text-color);
@@ -244,6 +267,7 @@ ul{
 .team-img{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-right: 30px;
     box-sizing: border-box;
     width: 270px;
     margin-top: 50px;
@@ -251,13 +275,16 @@ ul{
 
     background-color: #FFFFFF;
 }
+.team-img:nth-child(4){
+    margin-right: 0px;
+}
 /* Footer */
 .page-footer{
+    padding: 60px;
     background-color: var(--title-text-colot);
+
 }
 .logo-footer{
-    margin-top: 60px;
-
     color: var(--accent-color);
     font-family: Raleway, cursive;
     font-weight: 700;
@@ -278,7 +305,7 @@ ul{
     margin-top: 20px;
 }
 .link-info-address {
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: 0px;
     font-style: normal;
     color: #FFFFFF;
@@ -304,19 +331,36 @@ ul{
     color: #2196F3;
 }
 /* Second page */
+.page-header{
+    border-bottom: 1px solid #ececec;
+}
 .second-page{
-    padding: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .info-menu{
+    border: 1px solid #EEEEEE;
+    margin-right: 30px;
+    width: 370px;
     margin-top: 30px;
     margin-bottom: 0px;
 }
+.info-menu:nth-child(3n){
+    margin-right: 0px;
+}
+.info-menu:nth-child(-n + 3){
+    margin-top: 94px;
+}
+.container-menu{
+    padding: 20px 24px;
+}
 .project-menu{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
 }
 .title-menu{
-    margin-top: 20px;
-    margin-bottom: 0px;
+    margin: 0px;
+    
     color: var(--title-text-colot); 
     font-weight: 700;
     font-size: 18px;
@@ -324,15 +368,22 @@ ul{
     letter-spacing: 0.06em;
 }
 .subline-menu{
-    margin-top: 4px;
-    margin-bottom: 0px;
+    margin: 0px;
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em
 }
 /* Filter */
+
+.filter{
+    text-align: center;
+}
+.button{
+    padding: 6px 22px
+}
 .filter .filter-menu .button {
+    
     border-radius: 4px;
     display: inline-block;
     color: var(--title-text-colot);
@@ -342,6 +393,13 @@ ul{
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.03em;
+}
+.filter-menu{
+    margin-right: 8px;
+    display: inline;
+}
+.filter-menu:nth-child(5){
+    margin-right: 0px;
 }
 .filter .filter-menu .button:hover,
 .filter .filter-menu .button:focus{
