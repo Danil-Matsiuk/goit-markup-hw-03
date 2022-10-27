@@ -9,6 +9,7 @@ html{
 }
 *, *::before, *::after{
     box-sizing: inherit;
+
 }
 .container{
     margin-left: auto;
@@ -21,6 +22,7 @@ body{
     font-family:Roboto, sans-serif;
     letter-spacing: 0.02em;
     margin: 0;
+    padding: 0;
 }
 /*Web Studio Logo*/
 .logo{
@@ -125,7 +127,7 @@ ul{
 }
 /* Hero Menu*/
 .hero {
-    padding: 200px;
+    padding: 200px 0px 200px 0px;
     text-align: center;
     background-color: var(--title-text-colot);
 }
@@ -133,7 +135,6 @@ ul{
 .button{
     display: inline-block;
     border: 0px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 11px 32px;  
     border-radius: 4px;
 
@@ -156,15 +157,12 @@ ul{
     width: 270px;
 }
 /* Section */
-.section.no-padding{
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
+
 .section{
-    padding: 94px;
+    padding-bottom: 94px;
 }
 .section-team{
-    padding: 94px;
+    padding: 94px 0px 94px 0px;
 }
 .section-title{
     margin-top: 0px;
@@ -209,6 +207,7 @@ ul{
     letter-spacing: 0.03em;
 }
 .hero-title{
+
     text-align: center;
     margin: 0px;
 
@@ -220,9 +219,14 @@ ul{
     letter-spacing: 0.03em;
 }
 .container-card{
-    padding: 30px 70px;
+    padding: 30px 0px 30px 0px;
 
 }
+
+.about {
+    padding-top: 94px;
+}
+
 .subline{
     
     margin-top: 10px;
@@ -280,7 +284,7 @@ ul{
 }
 /* Footer */
 .page-footer{
-    padding: 60px;
+    padding: 60px 0px 60px 0px;
     background-color: var(--title-text-colot);
 
 }
@@ -304,9 +308,14 @@ ul{
 .address-footer{
     margin-top: 20px;
 }
-.link-info-address {
-    margin-top: 20px;
+.footer-nav{
+    margin-top: 20;
+}
+.footer-adress{
+    margin-top: 9px;
     margin-bottom: 0px;
+}
+.link-info-address {
     font-style: normal;
     color: #FFFFFF;
     font-size: 14px;
@@ -316,8 +325,6 @@ ul{
 
 .page-footer .address-footer .list-info.footer .link{
     display: inline-block;
-    margin-bottom: 0px;
-    margin-top: 9px;
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
@@ -349,7 +356,7 @@ ul{
     margin-right: 0px;
 }
 .info-menu:nth-child(-n + 3){
-    margin-top: 94px;
+
 }
 .container-menu{
     padding: 20px 24px;
@@ -378,6 +385,7 @@ ul{
 
 .filter{
     text-align: center;
+    margin-bottom: 50px;
 }
 .button{
     padding: 6px 22px
@@ -404,7 +412,6 @@ ul{
 .filter .filter-menu .button:hover,
 .filter .filter-menu .button:focus{
     border: 2px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1);
     color: #FFFFFF;
     background-color: #2196F3;
     cursor: pointer;
